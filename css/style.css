@@ -1,0 +1,280 @@
+:root {
+    --primary-color: #669acc;
+    --primary-color-light: #86bddc;
+    --secondary-color: #679966;
+    --secondary-color-light: #9acc99;
+    --light-color: #f4f4f4;
+    --white: #ffffff;
+    --grey: ##333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    margin: 0 5vh;
+}
+
+/* showcase */
+
+#showcase {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background: url(../img/pineapple-1920.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+    overflow-y: hidden;
+
+}
+
+#showcase .container {
+    margin: auto;
+    margin-top: 40vh;
+    margin-right: 10ch;
+    
+
+}
+
+#showcase h1 {
+    font-size:4rem;
+    text-align: right;
+    margin: initial;
+}
+
+#showcase h2{
+    font-size: 2rem;
+    text-align: right;
+    /* transform: translateX(10rem); */
+}
+
+/* Boxes */
+
+#boxes {
+    border-top: var(--secondary-color) solid 5px;
+    border-bottom: var(--secondary-color) solid 5px;
+
+
+    background: var(--secondary-color-light);
+    height: 30vh;
+}
+
+
+
+#boxes .container {
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    vertical-align: middle;
+
+}
+
+#boxes .box {
+    /* background: var(--secondary-color); */
+    height: 80%;
+    width: 90%;
+    text-align: center;
+    /* vertical-align: middle;  */
+}
+
+#boxes h3{
+    margin-top: 5vh;
+    vertical-align: middle;
+}
+
+/* Transport */
+#transport {
+    background: var(--primary-color-light);
+    height: 60vh;
+}
+
+#transport .container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100%;
+}
+
+#transport .text {
+    margin-top: 20vh;
+    flex:40%;
+    width: 90%;
+    text-align: center;
+    
+}
+
+#transport .image {
+    /* margin: 15% 0; */
+    flex:60%;
+    /* float: right; */
+    /* padding-top: 5%; */
+    background: url(../img/bicycle-city-fruit-137078.jpg) no-repeat;
+    width: 100%;
+    height: 50vh;
+    margin-top:5vh;
+    border: var(--primary-color) solid 5px;
+
+}
+#transport img{
+    width: 100%;
+    height: 50%;
+    display: none;
+
+}
+
+/* Offer */
+#offer {
+    border-top: var(--secondary-color) solid 5px;
+    background: var(--secondary-color-light);
+}
+
+#offer .container {
+    height: 70vh;
+
+}
+
+#offer h3 {
+    margin: 1rem;
+}
+
+#offer .grid {
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#offer .item {
+    width: 90%;
+    height: 90%;
+    /* background: var(--secondary-color); */
+    text-align: center;
+
+}
+
+footer {
+    background: var(--secondary-color);
+    text-align: center;
+    padding: 5px;
+}
+
+/* Navigation */
+
+nav {
+    height: 40px;
+    width: 100%;
+    background-color: #333;
+    color: #eee;
+    position: fixed;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    float: left;
+}
+
+nav a {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+    color: #eee;
+    text-decoration: none;
+}
+
+nav li:hover {
+    background-color: #444;
+}
+
+nav a#openup {
+    display: none;
+}
+
+
+@media screen and (max-width: 580px) {
+    .hide-on-small {
+        display: none;
+    }
+    #showcase {
+        height: 50vh;
+    }
+
+    nav {
+        height: auto;
+        border-bottom: 0;
+    }
+    nav ul {
+        display: none;
+        height: auto;
+    }
+    nav li {
+        width: 100%;
+        float: left;
+        position: relative;
+    }
+    nav a {
+        text-align: left;
+        width: 100%;
+        text-indent: 25px;
+        background: #333;
+        border-bottom: 1px solid #555;
+    }
+    nav a:hover {
+        background: #444;
+    }
+    nav a#openup:after {
+        content: "|||";
+        transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        /* IE 9 */
+        -webkit-transform: rotate(-90deg);
+        /* Safari and Chrome */
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        right: 5px;
+        top: 20px;
+    }
+    nav a#openup {
+        display: block;
+        background-color: #333;
+        width: 100%;
+        position: relative;
+    }
+}
+
+.cf:before, .cf:after {
+    content: "";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    zoom: 1;
+}
+
+
